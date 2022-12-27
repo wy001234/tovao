@@ -1,0 +1,146 @@
+/* Slider */
+/* 1.8.1 버전 확인 완료 */
+
+.slick-slider{position:relative;display:block; box-sizing:border-box;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
+    -webkit-touch-callout:none;
+    -khtml-user-select:none;
+    -ms-touch-action:pan-y; touch-action:pan-y;
+    -webkit-tap-highlight-color:transparent;
+    margin:0; padding:0; outline:none;}
+
+.slick-slider{visibility:hidden; opacity:0; transition:0.3s;}
+.slick-slider.slick-initialized{visibility:visible; opacity:1;}
+.ec-base-product .sliderArea.prdList{display:block; opacity:0; transition:0.1s 0.1s;}
+.ec-base-product .sliderArea.prdList.slick-initialized{opacity:1;}
+
+/*
+body#main .slick-slider{transition:5s;}
+*/
+
+.slick-slider *{margin:0; padding:0; box-sizing:border-box; outline:none;}
+.slick-list{position:relative; display:block; overflow:hidden; margin:0; padding:0;}
+.slick-list:focus{outline:none;}
+.slick-list.dragging{cursor:pointer; cursor:hand;}
+.slick-slider .slick-track,
+.slick-slider .slick-list{-webkit-transform:translate3d(0, 0, 0); -moz-transform:translate3d(0, 0, 0); -ms-transform:translate3d(0, 0, 0); -o-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0);}
+.slick-track{position:relative; top:0; left:0; display:block; margin-left:auto; margin-right:auto;}
+.slick-track:before,
+.slick-track:after{display:table; content:'';}
+.slick-track:after{clear:both;}
+.slick-loading .slick-track{visibility:hidden;}
+.slick-slide{display:none; float:left; height:100%; min-height:1px;}
+[dir='rtl'] .slick-slide{float:right;}
+.slick-slide img{display:block;}
+.slick-slide.slick-loading img{display:none;}
+.slick-slide.dragging img{pointer-events:none;}
+.slick-initialized .slick-slide{display:block;}
+.slick-loading .slick-slide{visibility:hidden;}
+.slick-vertical .slick-slide{display:block; height:auto; border:0;}
+.slick-arrow.slick-hidden {display:none;}
+
+
+.slick-slider{}
+.slick-slider div.slick-list{}
+.slick-slider div.slick-list div.slick-track{}
+.slick-slider div.slick-list div.slick-track .slick-slide{display:inline-block; text-align:center;}
+.slick-slider div.slick-list div.slick-track .slick-slide a{}
+.slick-slider div.slick-list div.slick-track .slick-slide img{display:inline-block;}
+
+.slick-slider>button{position:absolute; top:50%; margin-top:-30px; width:40px; height:60px; color:#fff; z-index:55; background-position:center; background-repeat:no-repeat; background-color:transparent;}
+.slick-slider button.small{margin-top:-20px; width:30px; height:40px;}
+.slick-slider button.medium{margin-top:-30px; width:40px; height:60px;}
+.slick-slider button.big{margin-top:-40px; width:60px; height:80px;}
+.slick-slider button.slick-prev{background-color:rgba(255,255,255,0.4); z-index:60;}
+.slick-slider button.slick-next{background-color:rgba(255,255,255,0.4); z-index:60;}
+.slick-slider button.slick-arrow div{display:none; position:relative; width:100%; height:100%;}
+.slick-slider button.slick-arrow.slick-disabled{opacity:0.8; cursor:not-allowed;}
+
+
+/* css */
+.slick-slider button.slick-arrow.css div{display:block; opacity:0.5; transition:0.2s;}
+.slick-slider button.slick-arrow.css:hover div{opacity:0.8;}
+.slick-slider button.slick-arrow.css span{display:block; position:absolute; height:1px; background:#000; z-index:10;}
+
+.slick-slider button.slick-arrow.css.small span{width:15px;}
+.slick-slider button.slick-arrow.slick-prev.css.small span.l1{left:7px; top:15px; -webkit-transform:rotate(-50deg); -moz-transform:rotate(-50deg); -ms-transform:rotate(-50deg);  -o-transform:rotate(-50deg); transform:rotate(-50deg);}
+.slick-slider button.slick-arrow.slick-prev.css.small span.l2{left:7px; top:26px; -webkit-transform:rotate(50deg); -moz-transform:rotate(50deg); -ms-transform:rotate(50deg); -o-transform:rotate(50deg); transform:rotate(50deg);}
+.slick-slider button.slick-arrow.slick-next.css.small span.l1{right:7px; top:15px; -webkit-transform:rotate(50deg); -moz-transform:rotate(50deg); -ms-transform:rotate(50deg); -o-transform:rotate(50deg); transform:rotate(50deg);}
+.slick-slider button.slick-arrow.slick-next.css.small span.l2{right:7px; top:26px; -webkit-transform:rotate(-50deg); -moz-transform:rotate(-50deg); -ms-transform:rotate(-50deg);  -o-transform:rotate(-50deg); transform:rotate(-50deg);}
+.slick-slider button.slick-arrow.css.small span.l3{display:none;}
+.slick-slider button.slick-arrow.css.medium span{width:20px;}
+.slick-slider button.slick-arrow.slick-prev.css.medium span.l1{left:10px; top:23px; -webkit-transform:rotate(-50deg); -moz-transform:rotate(-50deg); -ms-transform:rotate(-50deg);  -o-transform:rotate(-50deg); transform:rotate(-50deg);}
+.slick-slider button.slick-arrow.slick-prev.css.medium span.l2{left:10px; top:38px; -webkit-transform:rotate(50deg); -moz-transform:rotate(50deg); -ms-transform:rotate(50deg); -o-transform:rotate(50deg); transform:rotate(50deg);}
+.slick-slider button.slick-arrow.slick-next.css.medium span.l1{right:10px; top:23px; -webkit-transform:rotate(50deg); -moz-transform:rotate(50deg); -ms-transform:rotate(50deg); -o-transform:rotate(50deg); transform:rotate(50deg);}
+.slick-slider button.slick-arrow.slick-next.css.medium span.l2{right:10px; top:38px; -webkit-transform:rotate(-50deg); -moz-transform:rotate(-50deg); -ms-transform:rotate(-50deg);  -o-transform:rotate(-50deg); transform:rotate(-50deg);}
+.slick-slider button.slick-arrow.css.medium span.l3{display:none;}
+.slick-slider button.slick-arrow.css.big span{width:30px;}
+.slick-slider button.slick-arrow.slick-prev.css.big span.l1{left:13px; top:28px; -webkit-transform:rotate(-50deg); -moz-transform:rotate(-50deg); -ms-transform:rotate(-50deg);  -o-transform:rotate(-50deg); transform:rotate(-50deg);}
+.slick-slider button.slick-arrow.slick-prev.css.big span.l2{left:13px; top:51px; -webkit-transform:rotate(50deg); -moz-transform:rotate(50deg); -ms-transform:rotate(50deg); -o-transform:rotate(50deg); transform:rotate(50deg);}
+.slick-slider button.slick-arrow.slick-next.css.big span.l1{right:13px; top:28px; -webkit-transform:rotate(50deg); -moz-transform:rotate(50deg); -ms-transform:rotate(50deg); -o-transform:rotate(50deg); transform:rotate(50deg);}
+.slick-slider button.slick-arrow.slick-next.css.big span.l2{right:13px; top:51px; -webkit-transform:rotate(-50deg); -moz-transform:rotate(-50deg); -ms-transform:rotate(-50deg);  -o-transform:rotate(-50deg); transform:rotate(-50deg);}
+.slick-slider button.slick-arrow.css.big span.l3{display:none;}
+
+
+
+/* font (xi) */
+.slick-slider button.slick-arrow.font{width:50px; color:#666; font-size:50px; line-height:60px; text-align:center; background-color:rgba(255,255,255,0.5); background-image:none; text-indent:0; }
+.slick-slider button.slick-arrow.font:after{font-family:xeicon!important;}
+.slick-slider button.slick-arrow.slick-prev.font:after{content:"\e93d";}
+.slick-slider button.slick-arrow.slick-next.font:after{content:"\e940";}
+.slick-slider button.slick-arrow.slick-prev.up.font:after{content:"\e946";}
+.slick-slider button.slick-arrow.slick-next.down.font:after{content:"\e943";}
+
+
+
+/* image */
+.slick-slider button.small.image.up{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowUs.png');}
+.slick-slider button.small.image.down{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowDs.png');}
+.slick-slider button.slick-prev.image{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowLm.png');}
+.slick-slider button.slick-next.image{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowRm.png');}
+.slick-slider button.slick-prev.image.small{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowLs.png');}
+.slick-slider button.slick-next.image.small{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowRs.png');}
+.slick-slider button.slick-prev.image.medium{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowLm.png');}
+.slick-slider button.slick-next.image.medium{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowRm.png');}
+.slick-slider button.slick-prev.image.big{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowLb.png');}
+.slick-slider button.slick-next.image.big{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowRb.png');}
+.slick-slider button.small.image.up{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowUs.png');}
+.slick-slider button.small.image.down{background-image:url('/_JS-Design/plugin/slick/img/arrow_black/arrowDs.png');}
+
+.slick-slider button.slick-prev.image.white{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowLm.png'); z-index:60;}
+.slick-slider button.slick-next.image.white{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowRm.png'); z-index:60;}
+.slick-slider button.slick-prev.image.white.small{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowLs.png');}
+.slick-slider button.slick-next.image.white.small{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowRs.png');}
+.slick-slider button.slick-prev.image.white.medium{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowLm.png');}
+.slick-slider button.slick-next.image.white.medium{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowRm.png');}
+.slick-slider button.slick-prev.image.white.big{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowLb.png');}
+.slick-slider button.slick-next.image.white.big{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowRb.png');}
+.slick-slider button.white.small.image.up{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowUs.png');}
+.slick-slider button.white.small.image.down{background-image:url('/_JS-Design/plugin/slick/img/arrow_white/arrowDs.png');}
+
+
+.slick-slider ul.slick-dots{display:none; position:absolute; bottom:0; width:100%; height:40px; text-align:center; z-index:55;}
+.slick-slider ul.slick-dots:after{display:block; content:""; clear:both;}
+.slick-slider ul.slick-dots li{position:relative; display:inline-block; width:8px; height:8px; margin:15px 2px 0 2px; z-index:10; transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);}
+.slick-slider ul.slick-dots li button{display:block; width:100%; height:100%; background:rgba(0,0,0,0.2); text-indent:-9999px; transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); border-radius:50%; }
+.slick-slider ul.slick-dots li.slick-active{}
+.slick-slider ul.slick-dots li.slick-active button{background:rgba(0,0,0,0.9); transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);}
+
+
+
+
+
+
+
+
+/* 옵션 짤림방지 - 삭제 */
+
+.slick-slider .item_ .infoArea .btnArea>li.option{display:none;}
+
+
+
+
+
+
+
+/**/

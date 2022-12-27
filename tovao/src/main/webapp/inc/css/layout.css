@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+
+
+
+
+#wrap{position:relative; width:100%; padding-top:50px;}
+#container{width:100%; *zoom:1;}
+#contents{max-width:100%; margin:0 auto; padding:0;}
+
+
+
+@media all and (min-width:768px){
+  #wrap{padding-top:70px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

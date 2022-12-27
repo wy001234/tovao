@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+
+
+
+
+body #contents{padding:0;}
+.JS-header .bottom-in{display:none;}
+
+
+
+
+
+/* 메인이미지 */
+.JS-mainVisual{margin-bottom:100px;}
+.JS-mainVisual .slick-slider{margin:0 !important;}
+.JS-mainVisual .item{background-position:center; background-size:100%; height:500px; background-repeat:no-repeat;}
+.JS-mainVisual .item .infoArea{padding:100px 0 0 100px;}
+.JS-mainVisual .item .infoArea h1{font-size:45px; color:#fff; margin-bottom:10px;}
+.JS-mainVisual .item .infoArea p{color:#fff; opacity:0.7; font-size:18px; font-weight:normal; margin-bottom:40px;}
+.JS-mainVisual .item .infoArea a{display:inline-block; font-weight:500; font-size:18px; padding:10px 35px; background:#8fe2ff; color:#5a65dc; border-radius:10px;}
+.JS-mainVisual .slick-dots{bottom:20px;}
+.JS-mainVisual .slick-dots li{margin:0;}
+.JS-mainVisual .slick-dots li button{width:15px; padding:0; margin:0;}
+.JS-mainVisual .slick-dots li button:before{width:15px; color:#fff; opacity:1;}
+.JS-mainVisual .slick-dots li.slick-active{}
+.JS-mainVisual .slick-dots li.slick-active button:before{color:#6067b3;}
+
+
+/* 메인배너 공통 */
+[class*="main-banner"]{margin-bottom:100px;}
+[class*="main-banner"] header{text-align:center; margin-bottom:50px;}
+[class*="main-banner"] header h1{font-size:30px; font-weight:500;}
+
+
+
+
+
+/* 메인배너 01 */
+.JS-main-banner-01{}
+.JS-main-banner-01 ul{text-align:center;}
+.JS-main-banner-01 ul li{margin:0 15px;}
+.JS-main-banner-01 ul li a{}
+.JS-main-banner-01 ul li .icon{display:inline-block; margin-bottom:5px; padding:15px; background:#f5f5f5; border-radius:15px; transition:0.2s;}
+.JS-main-banner-01 ul li:hover .icon{background:#ddd;}
+.JS-main-banner-01 ul li img{}
+.JS-main-banner-01 ul li a p{font-size:15px; font-weight:500;}
+
+
+/* 메인배너 02 */
+.JS-main-banner-02{}
+.JS-main-banner-02 ul{text-align:center;}
+.JS-main-banner-02 ul li{width:31.3333%; padding:40px 0 20px 0; margin:0 1%; border:1px solid #ccc; border-radius:10px;}
+.JS-main-banner-02 ul li h1{font-size:25px; font-weight:500; margin-bottom:15px; }
+.JS-main-banner-02 ul li p{color:#ccc; margin-bottom:15px; font-size:17px;}
+.JS-main-banner-02 ul li .img{}
+.JS-main-banner-02 ul li img{}
+.JS-main-banner-02 ul li a{display:inline-block; width:55px; height:55px; line-height:55px; margin-bottom:20px; background:#8fe2ff; color:#fff; font-size:25px; border-radius:50%; transition:0.2s;}
+.JS-main-banner-02 ul li a:hover{background:#5a65dc;}
+
+
+/* 메인배너 04 */
+.JS-main-banner-04{}
+.JS-main-banner-04 ul{text-align:center;}
+.JS-main-banner-04 ul li{width:33.3333%; padding:50px 0;}
+.JS-main-banner-04 ul li + li:after{top:0; height:100%; background:#000;}
+.JS-main-banner-04 ul li h1{font-size:25px; margin-bottom:20px;}
+.JS-main-banner-04 ul li p{color:#ccc; font-size:15px;}
+
+
+/* 메인배너 05 */
+.JS-main-banner-05{}
+.JS-main-banner-05>.in{position:relative; height:200px; overflow:hidden; border-radius:15px; background:#46ADFC;}
+.JS-main-banner-05 .imgArea{position:absolute; top:0; right:80px;}
+.JS-main-banner-05 .imgArea img{}
+.JS-main-banner-05 .txtArea{color:#fff; padding:32px 0 0 50px;}
+.JS-main-banner-05 .txtArea h1{font-size:30px; font-weight:500; margin-bottom:5px;}
+.JS-main-banner-05 .txtArea p{font-size:13px; margin-bottom:20px;}
+.JS-main-banner-05 .txtArea a{display:inline-block; padding:5px 15px; background:#fff; border-radius:10px; color:#46ADFC; transition:0.2s;}
+.JS-main-banner-05 .txtArea a:hover{opacity:0.7;}
+
+
+/* 메인배너 06 */
+.JS-main-banner-06{}
+.JS-main-banner-06>.in{}
+.JS-main-banner-06 #boardArea{}
+.JS-main-banner-06 #boardArea .left{width:50%; padding-right:2%;}
+.JS-main-banner-06 #boardArea .right{width:50%; padding-left:2%;}
+.JS-main-banner-06 #boardArea h1{font-size:25px; font-weight:500; margin-bottom:20px;}
+.JS-main-banner-06 #boardArea ul{border-top:1px solid #ddd;}
+.JS-main-banner-06 #boardArea ul li{border-bottom:1px solid #ddd;}
+.JS-main-banner-06 #boardArea ul li a{position:relative; display:block; padding:16.3px 0;}
+.JS-main-banner-06 #boardArea ul li a .name,
+.JS-main-banner-06 #boardArea ul li a .title{font-size:15px; font-weight:500;}
+.JS-main-banner-06 #boardArea ul li a p{display:block; max-width:90%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:15px; color:#ccc; margin-bottom:5px;}
+.JS-main-banner-06 #boardArea ul li a span{display:block; color:#ccc; font-size:15px;}
+
+.JS-main-banner-06 #boardArea .notice ul li a:after{position:absolute; top:50%; right:0; font-size:20px; color:#000; height:20px; margin-top:-10px; font-family:xeicon; content:"\e940";}
+
+.JS-main-banner-06 #boardArea .review ul li{padding-left:100px;}
+.JS-main-banner-06 #boardArea .review ul li a{padding:20px 0;}
+.JS-main-banner-06 #boardArea .review ul li .profile{position:absolute; top:20px; left:-100px; width:55px; height:55px; background-color:#ddd; border-radius:50%; overflow:hidden; background-position:center; background-size:cover; background-repeat:no-repeat;}
+.JS-main-banner-06 #boardArea .review ul li .rate{position:absolute; top:20px; right:0;}
+.JS-main-banner-06 #boardArea .review ul li .cont{font-size:15px; margin-top:10px;}
+
+
+/* 메인배너 07 */
+.JS-main-banner-07{}
+.JS-main-banner-07>.in{}
+.JS-main-banner-07 ul{text-align:center;}
+.JS-main-banner-07 ul li{width:19%; padding:3% 0; margin:0 0.5%; border:1px solid #ddd; border-radius:15px;}
+.JS-main-banner-07 ul li:hover{border-color:#333;}
+.JS-main-banner-07 ul li a{}
+.JS-main-banner-07 ul li a img{max-width:100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

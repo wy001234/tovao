@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+
+
+
+
+
+#header{position:fixed; padding:0 20px; top:0; left:0; height:50px; width:100%; background:#fff; box-shadow:0 0 5px rgba(0,0,0,0.3); z-index:99;}
+#header>.in{position:relative; max-width:1200px; margin:0 auto; width:100%; height:100%;}
+#header h1{}
+#header h1 img{max-height:25px; vertical-align:middle;}
+#header .toggle-btn{position:absolute; top:0; right:0; text-align:center; cursor:pointer; width:50px; height:50px; line-height:50px;}
+#header .toggle-btn i{font-size:30px; line-height:50px;}
+#header .toggle-btn i.bar{display:inline-block;}
+#header .toggle-btn i.close{display:none;}
+#header.open .toggle-btn i.bar{display:none;}
+#header.open .toggle-btn i.close{display:inline-block;}
+#header .gnb{display:none; position:absolute; top:50px; right:10px; width:auto; text-align:center; box-shadow:0 3px 3px rgba(0,0,0,0.3);}
+#header.open .gnb{display:block;}
+#header .gnb ul{}
+#header .gnb ul li{width:100%; font-size:15px; background:#fff;}
+#header .gnb ul li + li{border-top:1px solid #ddd;}
+#header .gnb ul li.last{display:none;}
+#header .gnb ul li a{display:block; width:100%; height:100%; padding:5px 25px;}
+#header .gnb ul li.on a{color:#fcb131;}
+
+
+
+@media all and (min-width:768px){
+  #header{height:70px;}
+  #header h1{padding-top:10px;}
+  #header h1 img{max-height:35px;}
+  #header .toggle-btn{display:none;}
+  #header .gnb{display:block !important; top:0; right:0; box-shadow:none; display:table; font-size:0; line-height:0;}
+  #header .gnb ul li{font-size:15px; margin-left:40px; width:auto; display:inline-block; vertical-align:middle; line-height:70px; background:transparent;}
+  #header .gnb ul li + li{border:0;}
+  #header .gnb ul li a{padding:0 10px;}
+  #header .gnb ul li.last{display:inline-block;}
+  #header .gnb ul li.last a{display:inline-block; line-height:30px; padding:0 20px; background:#fcb131; color:#fff; border-radius:5px; transition:0.3s;}
+  #header .gnb ul li.last a:hover{opacity:0.7;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

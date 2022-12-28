@@ -40,6 +40,11 @@ public class ListController extends HttpServlet {
 			currentPage = Integer.parseInt(pg);
 		}
 		
+		
+		//글 번호 인덱스 (ex:1페이지=0부터, 2페이지=10부터)
+		start = (currentPage - 1) * 10;
+		
+		
 		//현재 페이지 그룹 (ex: 1~10 11~20 21~30)
 		currentPageGroup = (int)Math.ceil(currentPage / 10.0); //총번호
 		pageGroupStart = (currentPageGroup -1) * 10 + 1; //시작번호
@@ -61,10 +66,6 @@ public class ListController extends HttpServlet {
 		if(pageGroupEnd > lastPageNum){
 			pageGroupEnd = lastPageNum;
 		}
-		
-		//글 번호 인덱스 (ex:1페이지=0부터, 2페이지=10부터)
-		start = (currentPage - 1) * 10;
-		
 		
 		req.setAttribute("pageGroupStart", pageGroupStart);
 		req.setAttribute("pageGroupEnd", pageGroupEnd);

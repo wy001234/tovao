@@ -31,9 +31,10 @@
     <ul class="cont-list">
     	<c:forEach var="item" items="${board}">
   		<li>
-	        <div class="title">${item.title}</div>
+	        <div class="title">${item.title}<span>${item.rdate}</span></div>
 	        <div class="content">
 	          ${item.content}
+	          <a href="/tovao/board/contactView.do?no=${item.no}">자세히 보기</a>
 	        </div>
       	</li>
         </c:forEach>
@@ -41,18 +42,18 @@
     <div class="paging">
        <c:if test="${pageGroupStart gt 1}">
 	    	<span class="prev">
-	            <a href="/tovao/board/list.do?pg=${pageGroupStart-1}">
+	            <a href="/tovao/board/contactList.do?pg=${pageGroupStart-1}">
 	                <&nbsp;이전</a>
 	        </span>
 	   </c:if>
        <span class="num">
           <c:forEach var="num" begin="${pageGroupStart}" end="${pageGroupEnd}">
-		     <a href="/tovao/board/list.do?&pg=${num}" class="num ${currentPage eq num ? 'on' : 'off' }">${num}</a>
+		     <a href="/tovao/board/contactList.do?&pg=${num}" class="num ${currentPage eq num ? 'on' : 'off' }">${num}</a>
 		  </c:forEach>
        </span>
        <c:if test="${pageGroupEnd lt lastPageNum}">
         	<span class="next">
-             	<a href="/tovao/board/list.do?&pg=${pageGroupEnd+1}">다음&nbsp;></a>
+             	<a href="/tovao/board/contactList.do?&pg=${pageGroupEnd+1}">다음&nbsp;></a>
          	</span>
     	</c:if>
      </div>

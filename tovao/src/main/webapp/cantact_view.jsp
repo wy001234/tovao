@@ -2,22 +2,23 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/layout/header.jsp"/>
             <section id="admin-index">
+                <nav>
+                    <h3>문의하기 보기</h3>
+                </nav>
                 <div id="admin_cs_view">
                     <div class="admin_cs_view_div">
                        <table border="0">
 								<tr>
-					                <th>글 번호</th>
-					                <td>${board.no}</td>
+					                <th>성함</th>
+					                <td>${board.name}</td>
 					            </tr>
 					            <tr>
-					                <th>제목</th>
-					                <td>${board.title}</td>
+					                <th>이메일</th>
+					                <td>${board.email}</td>
 					            </tr>
-					            <tr>
-					                <th>이미지</th>
-					                <td>
-					                    <img src="/tovao/file/${board.thumb}" alt="thumb">
-					                </td>
+					             <tr>
+					                <th>전화번호</th>
+					                <td>${board.phone}</td>
 					            </tr>
 					            <tr>
 					                <th>내용</th>

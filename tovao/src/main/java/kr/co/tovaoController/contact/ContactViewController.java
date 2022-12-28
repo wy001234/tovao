@@ -1,4 +1,4 @@
-package kr.co.tovaoController.board;
+package kr.co.tovaoController.contact;
 
 import java.io.IOException;
 
@@ -12,9 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import kr.co.tovaoController.DAO.BoardDAO;
 import kr.co.tovaoController.VO.BoardVO;
 
-@WebServlet("/board/view.do")
-public class ViewController extends HttpServlet{
+@WebServlet("/board/contactView.do")
+public class ContactViewController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,8 +29,7 @@ public class ViewController extends HttpServlet{
 		req.setAttribute("board", board);
 		req.setAttribute("pg", pg);
 		
-		RequestDispatcher dispathcer = req.getRequestDispatcher("/view.jsp");
+		RequestDispatcher dispathcer = req.getRequestDispatcher("/cantact_view.jsp");
 		dispathcer.forward(req, resp);
 	}
-
 }

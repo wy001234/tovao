@@ -111,7 +111,36 @@ public class BoardDAO extends DBCP {
 				vo.setHit(rs.getString(6));
 				vo.setContent(rs.getString(7));
 				vo.setThumb(rs.getString(8));
-				vo.setRdate(rs.getString(11).substring(0,10));
+				vo.setRdate(rs.getString(11));
+				board.add(vo);
+			}
+			close();
+		}catch(Exception e){
+			logger.error(e.getMessage());
+		}
+		logger.debug("데이터 입력" + board.size());
+		return board;
+	}
+	
+	//게시글 갤러리 리스트
+	public List<BoardVO> selectContact(int start) {
+		List<BoardVO> board = new ArrayList<>();
+		try{			
+			conn = getConnection();
+			psmt = conn.prepareStatement("SELECT * FROM `tovao_board` WHERE `cate` = '문의하기' ORDER BY `no` DESC LIMIT ?,10");
+			psmt.setInt(1, start);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				BoardVO vo = new BoardVO();
+				vo.setNo(rs.getString(1));
+				vo.setCate(rs.getString(2));
+				vo.setTitle(rs.getString(4));
+				vo.setHit(rs.getString(6));
+				vo.setContent(rs.getString(7));
+				vo.setRdate(rs.getString(11));
+				vo.setName(rs.getString(12));
+				vo.setEmail(rs.getString(13));
+				vo.setPhone(rs.getString(14));
 				board.add(vo);
 			}
 			close();
@@ -160,11 +189,30 @@ public class BoardDAO extends DBCP {
 		return result;
 	}
 	
+	//리스트 페이징 갤러리
+	public int selectCountContact() {
+		int result = 0;
+		try {
+			logger.info("페이징 처리");
+			conn = getConnection();
+			psmt = conn.prepareStatement(Sql.COUNT_LIST_CONTACT);
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+				result = rs.getInt(1);
+			}
+			close();
+		}catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+		logger.debug("데이터 입력" + result);
+		return result;
+	}
+	
 	//게시글 보기
 	public BoardVO BoardView(String no) {
 		BoardVO vo = null;
 		try{			
-			logger.info("공지사항 보기");
+			logger.info("게시글 보기");
 			conn = getConnection();
 			psmt = conn.prepareStatement(Sql.SELECT_BOARD);
 			psmt.setString(1, no);
@@ -174,7 +222,12 @@ public class BoardDAO extends DBCP {
 				vo.setNo(rs.getString(1));
 				vo.setCate(rs.getString(2));
 				vo.setTitle(rs.getString(4));
+				vo.setHit(rs.getString(6));
 				vo.setContent(rs.getString(7));
+				vo.setThumb(rs.getString(8));
+				vo.setName(rs.getString(12));
+				vo.setEmail(rs.getString(13));
+				vo.setPhone(rs.getString(14));
 			}
 			close();
 		}catch(Exception e){

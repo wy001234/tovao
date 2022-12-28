@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="/tovao/inc/css/board.css">
   
   <!-- 스마크에디터 -->
-  <script type="text/javascript" src="/tovao-homepage-JSP/smarteditor/js/HuskyEZCreator.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/tovao/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 
   <!-- plugin -->
   <link rel="stylesheet" href="https://unpkg.com/@icon/icofont/icofont.css">
@@ -65,13 +65,14 @@
                <c:when test="${not empty sessUser.uid}">
            		<li style="font-weight:bold;">${sessUser.name}님, 환영합니다.</li>
                 <li class="d1 about"><a href="/tovao/board/write.do">글쓰기</a></li>
+                <li class="d1 about"><a href="/tovao/board/contactList.do">문의 리스트</a></li>
                 </c:when>
                 <c:otherwise>
                 	<li class="d1 about"><a href="/tovao/login.do">관리자 로그인</a></li>
                	</c:otherwise>
             </c:choose>      
-            <li class="d1 about"><a href="about.php">ABOUT</a></li>
-            <li class="d1 service"><a href="service.php">SERVICE</a></li>
+            <li class="d1 about"><a href="/tovao/about.jsp">ABOUT</a></li>
+            <li class="d1 service"><a href="/tovao/service.jsp">SERVICE</a></li>
             <li class="d1 board"><a href="/tovao/board/list.do">BOARD</a></li>
             <li class="d1 contact"><a href="/tovao/board/contact.do">CONTACT</a></li>
             <li class="d1 last"><a href="#">앱 다운받기</a></li>

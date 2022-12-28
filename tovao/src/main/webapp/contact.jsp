@@ -22,14 +22,15 @@
     <h2 class="title">CONTACT</h2>
 
     <fieldset>
-      <form action="">
-        <input type="text" placeholder="성함을 입력해주세요.">
-        <input type="text" placeholder="이메일을 입력해주세요.">
-        <input type="text" placeholder="전화번호를 입력해주세요.">
-        <textarea name="" id="" cols="30" rows="6" placeholder="자세한 내용을 입력해주세요."></textarea>
+      <form action="/tovao/board/contact.do" method="post" enctype="multipart/form-data">
+        <input type="hidden" name ="cate" value="문의하기">
+        <input type="text" name ="name" placeholder="성함을 입력해주세요.">
+        <input type="text" name ="eamil" placeholder="이메일을 입력해주세요.">
+        <input type="text" name ="phone" placeholder="전화번호를 입력해주세요.">
+        <textarea name="content" id="" cols="30" rows="6" placeholder="자세한 내용을 입력해주세요."></textarea>
 
         <div class="ec-base-button">
-          <button class="btnSubmit sizeS">확인</button>
+          <button  class="btnSubmit sizeS">확인</button>
           <button class="btnNormal sizeS">취소</button>
         </div>
 

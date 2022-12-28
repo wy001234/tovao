@@ -1,4 +1,4 @@
-package kr.co.tovaoController.board;
+package kr.co.tovaoController.contact;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,16 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 import kr.co.tovaoController.DAO.BoardDAO;
 import kr.co.tovaoController.VO.BoardVO;
 
-@WebServlet("/board/gallery.do")
-public class BoardGalleryController extends HttpServlet {
+@WebServlet("/board/contactList.do")
+public class ContactListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-			
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		BoardDAO dao = BoardDAO.getInstance();
-		List<BoardVO> boards = new ArrayList<>();
-		
+		List<BoardVO> board = new ArrayList<>();
 		//페이징 처리
 		int start = 0;
 		int total = 0;
@@ -33,7 +32,7 @@ public class BoardGalleryController extends HttpServlet {
 		int pageGroupStart = 0;
 		int pageGroupEnd = 0;
 		
-
+	
 		//현재 페이지 번호
 		String pg = req.getParameter("pg");
 		
@@ -51,11 +50,11 @@ public class BoardGalleryController extends HttpServlet {
 		pageGroupEnd= currentPageGroup * 10; //끝번호
 		
 		//전체 게시물 갯수
-		total = dao.selectCountGallery();	
+		total = dao.selectCountContact();	
 		
 		//전체상품
-		boards = dao.selectGallery(start);	
-
+		board = dao.selectContact(start);	
+	
 		
 		//마지막 페이지 번호
 		if(total % 10 == 0){
@@ -68,7 +67,6 @@ public class BoardGalleryController extends HttpServlet {
 		}
 		
 		
-		
 		req.setAttribute("pageGroupStart", pageGroupStart);
 		req.setAttribute("pageGroupEnd", pageGroupEnd);
 		req.setAttribute("currentPage", currentPage);
@@ -76,16 +74,11 @@ public class BoardGalleryController extends HttpServlet {
 		req.setAttribute("total", total);
 		req.setAttribute("start", start);
 		
-		req.setAttribute("boards", boards);
+		req.setAttribute("board", board);
 		
 		System.out.println(start);
-		
-		RequestDispatcher dispathcer = req.getRequestDispatcher("/board-gallery.jsp");
-		dispathcer.forward(req, resp);
-		
-	
-	}
-	
-	
 
+		RequestDispatcher dispathcer = req.getRequestDispatcher("/contact_list.jsp");
+		dispathcer.forward(req, resp);
+	}
 }

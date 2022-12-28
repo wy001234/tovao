@@ -8,7 +8,7 @@ $(function(){
           oAppRef: oEditors,
           elPlaceHolder: "content", //textarea에서 지정한 id와 일치해야 합니다. 
           //SmartEditor2Skin.html 파일이 존재하는 경로
-          sSkinURI: "/tovao/smarteditor/SmartEditor2Skin.html",  
+          sSkinURI: "/tovao/se2/SmartEditor2Skin.html",  
           htParams : {
               // 툴바 사용 여부 (true:사용/ false:사용하지 않음)
               bUseToolbar : true,             
@@ -75,7 +75,7 @@ $(function(){
 	                                </tr>
 	                                <tr>
 	                                    <td>내용</td>
-	                                    <td><input type="text" name="content" id="content" rows="22"></td>
+	                                    <td><textarea name="content" id="content" rows="22"></textarea></td>
 	                                </tr>
 	                            </tbody>
 	                        </table>

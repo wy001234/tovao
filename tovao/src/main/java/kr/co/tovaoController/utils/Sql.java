@@ -11,7 +11,7 @@ public class Sql {
 										+ "`rdate`= NOW(), "
 										+ "`name`=?, "
 										+ "`email`=?, "
-										+ "`phone`=?, ";
+										+ "`phone`=?";
 	
 	//파일 넣기
 	public static final String INSERT_FILE = "insert into `tovao_board_file` set "
@@ -21,7 +21,8 @@ public class Sql {
 										+ "`rdate`= NOW()";
 
 	public static final String COUNT_LIST_BOARD = "SELECT COUNT(*) FROM `tovao_board` WHERE `cate` = '소식'";
-	public static final String COUNT_LIST_GALLERY = "SELECT COUNT(*) FROM `tovao_board` WHERE `cate` = '소식'";
+	public static final String COUNT_LIST_GALLERY = "SELECT COUNT(*) FROM `tovao_board` WHERE `cate` = '카드뉴스'";
+	public static final String COUNT_LIST_CONTACT = "SELECT COUNT(*) FROM `tovao_board` WHERE `cate` = '문의하기'";
 	
 	public static final String SELECT_BOARD = "select * from `tovao_board` WHERE `no`=?";
 

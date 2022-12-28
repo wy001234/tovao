@@ -9,12 +9,33 @@ public class BoardVO {
 	private String comment;
 	private String hit;
 	private String content;
+	private String thumb;
 	private String uid;
 	private String regip;
 	private String rdate;
-	private String thumb;
+	private String name;
+	private String email;
+	private String phone;
 	
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 	//파일 첨부 추가필드
 	private String fname;
 	private int fno;

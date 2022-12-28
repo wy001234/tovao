@@ -35,6 +35,9 @@ public class BoardDAO extends DBCP {
 			psmt.setString(3, vo.getContent());
 			psmt.setString(4, vo.getThumb());
 			psmt.setString(5, vo.getRegip());			
+			psmt.setString(6, vo.getName());			
+			psmt.setString(7, vo.getEmail());			
+			psmt.setString(8, vo.getPhone());			
 			psmt.executeUpdate();
 			close();
 			
@@ -81,7 +84,7 @@ public class BoardDAO extends DBCP {
 				vo.setTitle(rs.getString(4));
 				vo.setHit(rs.getString(6));
 				vo.setContent(rs.getString(7));
-				vo.setRdate(rs.getString(10));
+				vo.setRdate(rs.getString(11));
 				board.add(vo);
 			}
 			close();
@@ -107,7 +110,8 @@ public class BoardDAO extends DBCP {
 				vo.setTitle(rs.getString(4));
 				vo.setHit(rs.getString(6));
 				vo.setContent(rs.getString(7));
-				vo.setRdate(rs.getString(10));
+				vo.setThumb(rs.getString(8));
+				vo.setRdate(rs.getString(11).substring(0,10));
 				board.add(vo);
 			}
 			close();

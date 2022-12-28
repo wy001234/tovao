@@ -48,24 +48,24 @@ public class WriteController extends HttpServlet {
 		String cate = mr.getParameter("cate");
 		String title = mr.getParameter("title");
 		String content = mr.getParameter("content");
-		String thumb = mr.getParameter("thumb");
-		String fname = mr.getFilesystemName("fname");
+		String thumb = mr.getFilesystemName("thumb");
 		String regip = req.getRemoteAddr();
 		
-		String randName = getRandomString(thumb);	
-		String name = renameImage(path, thumb, randName);
-
-
 		// VO 데이터 생성
 		BoardVO vo = new BoardVO();
 		vo.setCate(cate);
 		vo.setTitle(title);
 		vo.setContent(content);
-		vo.setThumb(name);
 		vo.setRegip(regip);
+		if(thumb != null) {
+			String randName = getRandomString(thumb);	
+			String name = renameImage(path, thumb, randName);
+			vo.setThumb(name);
+		}
+
+
 		
-		//파일첨부 데이터 수신
-		vo.setFname(fname);
+	
 
 		// 데이터베이스 퍼리
 		logger.debug(vo.getContent());

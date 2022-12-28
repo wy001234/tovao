@@ -26,10 +26,30 @@ $(function(){
           oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
           $("input[name=submit_board]").submit();
       }); 
+      
+      
 });
  
- 
 </script>
+<script>
+	$(function(){
+		
+		//첫 실행
+		$('input[name=thumb]').hide();
+		
+		//카테고리 값 변경
+		$('#cate').change(function(){
+			let cate = $('select[name=cate]').val();
+			if(cate == '소식'){
+				$('input[name=thumb]').hide();
+			}else{
+				$('input[name=thumb]').show();
+			}
+		});
+		
+	});
+</script>
+
 
             <section id="admin-index">
                 <div id="admin_cs_write">
@@ -39,13 +59,14 @@ $(function(){
 	                            <tbody>
 	                                <tr>
 	                                    <td>유형</td>
-	                                    <input type="hidden" name="hit" value= "0">
-	                                    <input type="file" name="thumb">
+	                                    
 	                                    <td>
-	                                        <select name="cate" id="">
-	                                            <option value="고객 서비스">이벤트</option>
-	                                            <option value="안전거래">카드뉴스</option>
+	                                    	<input type="hidden" name="hit" value= "0">
+	                                    	<select name="cate" id="cate">
+	                                            <option value="소식">소식</option>
+	                                            <option value="카드뉴스">카드뉴스</option>
 	                                        </select>
+	                                    	<input type="file" name="thumb">
 	                                    </td>
 	                                </tr>
 	                                <tr>

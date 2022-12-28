@@ -28,7 +28,7 @@ public class ViewController extends HttpServlet{
 		req.setAttribute("board", board);
 		req.setAttribute("pg", pg);
 		
-		RequestDispatcher dispathcer = req.getRequestDispatcher("/view.jsp");
+		RequestDispatcher dispathcer = req.getRequestDispatcher("/tovao/view.jsp");
 		dispathcer.forward(req, resp);
 	}
 

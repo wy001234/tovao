@@ -8,7 +8,10 @@ public class Sql {
 										+ "`content`=?, "
 										+ "`thumb`=?, "
 										+ "`regip`=?, "
-										+ "`rdate`= NOW()";
+										+ "`rdate`= NOW(), "
+										+ "`name`=?, "
+										+ "`email`=?, "
+										+ "`phone`=?, ";
 	
 	//파일 넣기
 	public static final String INSERT_FILE = "insert into `tovao_board_file` set "

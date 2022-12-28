@@ -37,7 +37,8 @@
   <link rel="stylesheet" href="/tovao/inc/plugin/slick/slick/slick.css">
   <script src="/tovao/inc/js/basic.js"></script>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
 
 
 
@@ -72,7 +73,7 @@
             <li class="d1 about"><a href="about.php">ABOUT</a></li>
             <li class="d1 service"><a href="service.php">SERVICE</a></li>
             <li class="d1 board"><a href="/tovao/board/list.do">BOARD</a></li>
-            <li class="d1 contact"><a href="contact.php">CONTACT</a></li>
+            <li class="d1 contact"><a href="/tovao/board/contact.do">CONTACT</a></li>
             <li class="d1 last"><a href="#">앱 다운받기</a></li>
           </ul>
         </nav>

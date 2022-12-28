@@ -22,7 +22,7 @@ public class BoardGalleryController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		BoardDAO dao = BoardDAO.getInstance();
-		List<BoardVO> board = new ArrayList<>();
+		List<BoardVO> boards = new ArrayList<>();
 		
 		//페이징 처리
 		int start = 0;
@@ -46,11 +46,14 @@ public class BoardGalleryController extends HttpServlet {
 		pageGroupStart = (currentPageGroup -1) * 10 + 1; //시작번호
 		pageGroupEnd= currentPageGroup * 10; //끝번호
 		
+		//글 번호 인덱스 (ex:1페이지=0부터, 2페이지=10부터)
+		start = (currentPage - 1) * 10;
+		
 		//전체 게시물 갯수
 		total = dao.selectCountGallery();	
 		
 		//전체상품
-		board = dao.selectGallery(start);	
+		boards = dao.selectGallery(start);	
 
 		
 		//마지막 페이지 번호
@@ -63,8 +66,6 @@ public class BoardGalleryController extends HttpServlet {
 			pageGroupEnd = lastPageNum;
 		}
 		
-		//글 번호 인덱스 (ex:1페이지=0부터, 2페이지=10부터)
-		start = (currentPage - 1) * 10;
 		
 		
 		req.setAttribute("pageGroupStart", pageGroupStart);
@@ -74,7 +75,7 @@ public class BoardGalleryController extends HttpServlet {
 		req.setAttribute("total", total);
 		req.setAttribute("start", start);
 		
-		req.setAttribute("board", board);
+		req.setAttribute("boards", boards);
 		
 		System.out.println(start);
 		

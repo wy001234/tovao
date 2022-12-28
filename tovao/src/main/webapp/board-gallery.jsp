@@ -29,10 +29,10 @@
     </div>
 
     <ul class="cont-gallery tablize">
-    	<c:forEach var="item" items="${board}">
+    	<c:forEach var="item" items="${boards}">
   		<li>
-	       <div class="img"><a href="/tovao/board/view.do?no=${item.no}"><img src="img/main-09-01.jpg" alt="">${item.title}</a></div>
-	        <div class="title"><a href="#">${item.thumb}</a></div>
+	       <div class="img"><a href="/tovao/board/view.do?no=${item.no}"><img src="/tovao/file/${item.thumb}" alt="thumb"></a></div>
+	        <div class="title"><a href="#">${item.title}</a></div>
 	        <div class="date">${item.rdate}</div>
       	</li>
         </c:forEach>

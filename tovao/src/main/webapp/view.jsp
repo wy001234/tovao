@@ -1,6 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/layout/header.jsp"/>
+<script>
+	$(function(){
+		if(${sessUser.level} != '7'){
+			$('.btn_red').hide();
+		}else{
+			$('.btn_red').show();
+		}
+		
+	});
+	
+</script>
             <section id="admin-index">
                 <div id="admin_cs_view">
                     <div class="admin_cs_view_div">
@@ -27,9 +38,8 @@
 					            </tr>               
 				        </table>
                         <div class="btn_right">
-                            <button class="btn_red" onclick = "location.href = '/Kmarket/admin/cs/notice/delete.do?no=${notice.no}' ">삭제</button>
-                            <button class="btn_blue" onclick = "location.href = '/Kmarket/admin/cs/notice/modify.do?no=${notice.no}' ">수정</button>
-                            <button class="btn_gray" onclick = "location.href = '/Kmarket/admin/cs/notice/list.do' ">목록</button>
+                            <button class="btn_red" id="btn_red" onclick = "location.href = '/tovao/board/delete.do?no=${board.no}'" style="display:none">삭제</button>
+                            <button class="btn_gray" onclick = "location.href = '/tovao/board/list.do' ">목록</button> 
                         </div>
                     </div>
                 </div>

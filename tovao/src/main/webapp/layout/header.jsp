@@ -23,6 +23,9 @@
   <!-- 스마크에디터 -->
   <script type="text/javascript" src="/tovao/se2/js/HuskyEZCreator.js" charset="utf-8"></script>
 
+  	 <!-- 제이쿼리 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	
   <!-- plugin -->
   <link rel="stylesheet" href="https://unpkg.com/@icon/icofont/icofont.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -36,8 +39,7 @@
   <script src="/tovao/inc/plugin/slick/slick/slick.minJS181.js"></script>
   <link rel="stylesheet" href="/tovao/inc/plugin/slick/slick/slick.css">
   <script src="/tovao/inc/js/basic.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	 
     
 
 

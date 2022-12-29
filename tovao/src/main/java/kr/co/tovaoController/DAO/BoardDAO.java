@@ -242,6 +242,21 @@ public class BoardDAO extends DBCP {
 	
 	//게시글 삭제
 	
+	//글삭제
+	public int deleteBoard(String no) {
+		int result = 0;
+		try {
+			logger.info("게시글 삭제 start");
+			conn = getConnection();
+			psmt = conn.prepareStatement(Sql.DELETE_BOARD);
+			psmt.setString(1, no);
+			psmt.executeUpdate();
+			close();
+		}catch(Exception e) {
+			logger.error(e.getMessage());
+		}
+		return result;
+	}
 	
 	
 	

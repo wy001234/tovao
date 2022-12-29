@@ -80,7 +80,7 @@ $(function(){
 	                            </tbody>
 	                        </table>
 	                        <div class="btn_right">
-	                            <button  class="btn_gray" onclick = "location.href = '/Kmarket/admin/cs/notice/list.do' ">목록</button>
+	                            <button  class="btn_gray" onclick = "location.href = '/board/list.do' ">목록</button>
 	                            <input name="submit_board"  class="btn_blue" type="submit" value="작성하기">                  
                         	</div>
                         </form> 

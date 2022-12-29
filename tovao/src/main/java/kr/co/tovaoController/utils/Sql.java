@@ -28,5 +28,6 @@ public class Sql {
 
 	//게시물보기
 	
-	
+	//게시글삭제
+	public static final String DELETE_BOARD = "DELETE FROM `tovao_board` WHERE `no`=?";
 }
